@@ -2,14 +2,14 @@
 #include <Keyboard.h>
 #include "buttonsClass.hpp"
 
-// TODO: FILL OUT WHEN DECIDED
+// button-register mappings
 constexpr uint8_t button1{A0};
-constexpr uint8_t button2{};
+constexpr uint8_t button2{A6};
 constexpr uint8_t button3{A1};
-constexpr uint8_t button4{};
+constexpr uint8_t button4{A7};
 constexpr uint8_t button5{A2};
-constexpr uint8_t button6{A3};
-constexpr uint8_t button7{};
+constexpr uint8_t button6{A8};
+constexpr uint8_t button7{A3};
 
 // buttons member
 Buttons buttons;
