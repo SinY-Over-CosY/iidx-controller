@@ -14,7 +14,7 @@ constexpr uint8_t button7{};
 // buttons member
 Buttons buttons;
 
-void getInputs(){ // TODO: MOVE TO EXTERNAL SOURCE FILE
+void getButtonInputs(){ // TODO: MOVE TO EXTERNAL SOURCE FILE
   // button 1
   if(digitalRead(button1) == HIGH){
     Keyboard.press(buttons.getBut1());
@@ -84,5 +84,5 @@ void setup(){
 }
 
 void loop(){
-
+  getButtonInputs();
 }
