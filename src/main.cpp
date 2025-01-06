@@ -3,12 +3,12 @@
 #include "buttonsClass.hpp"
 
 // TODO: FILL OUT WHEN DECIDED
-constexpr uint8_t button1{};
+constexpr uint8_t button1{A0};
 constexpr uint8_t button2{};
-constexpr uint8_t button3{};
+constexpr uint8_t button3{A1};
 constexpr uint8_t button4{};
-constexpr uint8_t button5{};
-constexpr uint8_t button6{};
+constexpr uint8_t button5{A2};
+constexpr uint8_t button6{A3};
 constexpr uint8_t button7{};
 
 // buttons member
@@ -16,7 +16,7 @@ Buttons buttons;
 
 void getButtonInputs(){ // TODO: MOVE TO EXTERNAL SOURCE FILE
   // button 1
-  if(digitalRead(button1) == HIGH){
+  if(digitalRead(button1) == LOW){
     Keyboard.press(buttons.getBut1());
   }
   else{
@@ -24,7 +24,7 @@ void getButtonInputs(){ // TODO: MOVE TO EXTERNAL SOURCE FILE
   }
 
   // button 2
-  if(digitalRead(button1) == HIGH){
+  if(digitalRead(button2) == LOW){
     Keyboard.press(buttons.getBut2());
   }
   else{
@@ -32,7 +32,7 @@ void getButtonInputs(){ // TODO: MOVE TO EXTERNAL SOURCE FILE
   }
 
   // button 3
-  if(digitalRead(button1) == HIGH){
+  if(digitalRead(button3) == LOW){
     Keyboard.press(buttons.getBut3());
   }
   else{
@@ -40,7 +40,7 @@ void getButtonInputs(){ // TODO: MOVE TO EXTERNAL SOURCE FILE
   }
 
   // button 4
-  if(digitalRead(button1) == HIGH){
+  if(digitalRead(button4) == LOW){
     Keyboard.press(buttons.getBut4());
   }
   else{
@@ -48,7 +48,7 @@ void getButtonInputs(){ // TODO: MOVE TO EXTERNAL SOURCE FILE
   }
 
   // button 5
-  if(digitalRead(button1) == HIGH){
+  if(digitalRead(button5) == LOW){
     Keyboard.press(buttons.getBut5());
   }
   else{
@@ -56,7 +56,7 @@ void getButtonInputs(){ // TODO: MOVE TO EXTERNAL SOURCE FILE
   }
 
   // button 6
-  if(digitalRead(button1) == HIGH){
+  if(digitalRead(button6) == LOW){
     Keyboard.press(buttons.getBut6());
   }
   else{
@@ -64,7 +64,7 @@ void getButtonInputs(){ // TODO: MOVE TO EXTERNAL SOURCE FILE
   }
 
   // button 7
-  if(digitalRead(button1) == HIGH){
+  if(digitalRead(button7) == LOW){
     Keyboard.press(buttons.getBut7());
   }
   else{
@@ -74,13 +74,13 @@ void getButtonInputs(){ // TODO: MOVE TO EXTERNAL SOURCE FILE
 
 void setup(){
   // button registers
-  pinMode(button1, INPUT);
-  pinMode(button2, INPUT);
-  pinMode(button3, INPUT);
-  pinMode(button4, INPUT);
-  pinMode(button5, INPUT);
-  pinMode(button6, INPUT);
-  pinMode(button7, INPUT);
+  pinMode(button1, INPUT_PULLUP);
+  pinMode(button2, INPUT_PULLUP);
+  pinMode(button3, INPUT_PULLUP);
+  pinMode(button4, INPUT_PULLUP);
+  pinMode(button5, INPUT_PULLUP);
+  pinMode(button6, INPUT_PULLUP);
+  pinMode(button7, INPUT_PULLUP);
 }
 
 void loop(){
